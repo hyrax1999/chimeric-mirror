@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-29",
+  "platform": "macOS arm64",
+  "bun": "1.4.3",
+  "python": "3.14.7",
+  "scope": "Integration source, network policy and exporter checks; application release gates are tracked separately.",
+  "cleanInstall": {
+    "command": "bun install --frozen-lockfile --ignore-scripts",
+    "exitCode": 0,
+    "packagesInstalled": 107
+  },
+  "transportTests": {
+    "command": "bun test",
+    "exitCode": 0,
+    "passed": 60,
+    "failed": 0,
+    "assertions": 246,
+    "files": 11
+  },
+  "sourceExport": {
+    "positiveManifest": true,
+    "strictTreeFindings": [],
+    "privateDeploymentMarkerFindings": [],
+    "originalRuntimeIncluded": false,
+    "privateProfileIncluded": false,
+    "canonicalRequiredBoundary": true,
+    "stagedAndRenamedFileHashesChecked": true
+  },
+  "negativeControls": [
+    "private files inside selected source rejected",
+    "symlinks to private files rejected",
+    "source manifest omissions rejected",
+    "stale destinations preserved",
+    "invalid links rejected",
+    "credential-pattern reports redact matched values",
+    "staged mutation aborts publication",
+    "Vendor analytics and crash destinations rejected before dispatch; custom provider input preserved",
+    "Malformed launcher arguments and non-loopback session URLs rejected"
+  ],
+  "ci": {
+    "configured": true,
+    "githubRunVerified": false,
+    "permissions": "contents:read",
+    "actionsPinnedByCommit": true
+  },
+  "observedTestInstrumentCorrection": "The staged-mutation test initially matched the original temp source due to macOS /var and /private/var aliases. Resolving both paths corrected the target before its confirmatory run.",
+  "publicationTests": {
+    "command": "python3 -m unittest discover -s tests -p 'test_*.py'",
+    "exitCode": 0,
+    "passed": 15,
+    "failed": 0,
+    "scope": "Source exclusion, manifest completeness, race control, archive/tree integrity and negative controls."
+  }
+}

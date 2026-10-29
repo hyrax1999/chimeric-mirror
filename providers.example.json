@@ -1,0 +1,34 @@
+{
+  "providers": {
+    "custom": {
+      "name": "My model endpoint",
+      "baseUrl": "https://api.example.com/v1",
+      "keyEnv": "MY_LLM_API_KEY",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "your-model-id",
+          "name": "My model"
+        }
+      ],
+      "modelOverrides": {
+        "your-model-id": {
+          "input": [
+            "text"
+          ],
+          "contextWindow": 32768,
+          "maxTokens": 4096
+        }
+      }
+    }
+  },
+  "defaultModel": "custom::your-model-id",
+  "headlineModels": [
+    "custom::your-model-id"
+  ],
+  "roles": {
+    "small": "custom::your-model-id",
+    "medium": "custom::your-model-id",
+    "large": "custom::your-model-id"
+  }
+}

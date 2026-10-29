@@ -1,0 +1,42 @@
+{
+  "files": [
+    "README.md",
+    "README.ja.md",
+    "LICENSE",
+    "NOTICE.md",
+    "SECURITY.md",
+    "CONTRIBUTING.md",
+    "CHANGELOG.md",
+    ".gitignore",
+    "package.json",
+    "bun.lock",
+    "providers.example.json",
+    "release.manifest.json",
+    "release-status.json"
+  ],
+  "directories": [
+    "src",
+    "tests",
+    "docs",
+    "third-party",
+    ".github"
+  ],
+  "tools": [
+    "build-runtime.ts",
+    "native-revisions.ts",
+    "native-process.ts",
+    "build-frontend.py",
+    "brand-frontend.mjs",
+    "generate-atom.mjs",
+    "ui_style.py",
+    "update-style.py",
+    "build-macos-app.py",
+    "build-portable.py",
+    "launcher.mjs",
+    "recover_runtime.py",
+    "local_asr.py",
+    "native_client.py",
+    "release_check.py",
+    "prepare-release.py"
+  ]
+}

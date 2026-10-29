@@ -1,0 +1,66 @@
+{
+  "product": "Chimeric",
+  "version": "0.1.0",
+  "channel": "development",
+  "reviewedOn": "2026-10-29",
+  "releaseGates": [
+    {
+      "id": "source-checks",
+      "status": "passed",
+      "requirement": "Clean source export, documentation links, credential exclusion and regression tests pass on the exported tree.",
+      "evidence": "docs/SOURCE-VERIFICATION.json",
+      "note": "Locked dependencies, 60 Bun tests/246 assertions and 15 Python export tests pass locally. GitHub CI is configured; its first run is pending."
+    },
+    {
+      "id": "fresh-profile",
+      "status": "pending",
+      "requirement": "Packaged Mac runtime starts from a fresh profile, performs a real research tool/artifact round trip, stops and restores successfully.",
+      "note": "Native Mac window booted a separate fresh profile. Source-built runtime completed an approved Python/artifact round trip and persisted an explicit use-intent choice across restart. Full backup/restore verification remains pending."
+    },
+    {
+      "id": "packaged-isolation",
+      "status": "pending",
+      "requirement": "Packaged research execution cannot read provider encryption keys or authentication credentials.",
+      "note": "Actual Mac sandbox denied opening the fake profile encryption key; zero contents read. The complete credential and packaged boundary matrix remains pending."
+    },
+    {
+      "id": "portable-files",
+      "status": "pending",
+      "requirement": "Managed image/PDF/Office/OCR converters work with bounded, isolated execution and installation failure/retry behavior."
+    },
+    {
+      "id": "linux-docker",
+      "status": "pending",
+      "requirement": "Fresh Docker installation executes the preserved research harness with sandbox isolation, approvals, artifacts, persistence and restore."
+    },
+    {
+      "id": "architecture-coverage",
+      "status": "pending",
+      "requirement": "Every claimed CPU/platform target runs the accepted verification suite; unimplemented targets require explicit scope alignment."
+    },
+    {
+      "id": "voice-portability",
+      "status": "pending",
+      "requirement": "Dictation works with documented portable dependencies rather than a separate private installation."
+    },
+    {
+      "id": "brand-language",
+      "status": "pending",
+      "requirement": "App-owned branding, signed-out and error pages, documentation links, and Japanese UI complete the final audit."
+    },
+    {
+      "id": "runtime-distribution",
+      "status": "review_required",
+      "requirement": "The distribution identifies upstream component rights and establishes permission for every included runtime component.",
+      "evidence": "docs/DISTRIBUTION.md",
+      "note": "Unresolved distribution risk; applicable rights and exceptions require assessment. No categorical legal conclusion is claimed."
+    },
+    {
+      "id": "source-license",
+      "status": "passed",
+      "requirement": "The project owner selects a distribution license for the new integration source.",
+      "evidence": "LICENSE and package.json",
+      "note": "New Chimeric source is selected for Apache License 2.0. This does not grant rights to the preserved upstream runtime, bundled assets, or upstream excerpts."
+    }
+  ]
+}

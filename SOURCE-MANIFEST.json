@@ -1,0 +1,363 @@
+{
+  "product": "Chimeric",
+  "kind": "integration-source",
+  "channel": "development",
+  "originalRuntimeIncluded": false,
+  "privateProfileIncluded": false,
+  "openReleaseGates": [
+    "fresh-profile",
+    "packaged-isolation",
+    "portable-files",
+    "linux-docker",
+    "architecture-coverage",
+    "voice-portability",
+    "brand-language",
+    "runtime-distribution"
+  ],
+  "files": [
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "sha256": "780ade8ea30793fe11460c6247035ac76bfec98d470884f3bee2085991aa940e"
+    },
+    {
+      "path": ".github/workflows/checks.yml",
+      "sha256": "c5e36203e2514e2d611aa078af8ef5c01f697c52dd7ed953264b3c65a448cac7"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "4278a4cb13daf5894864bb93854ee03710e844dd9da5b3f0cc7358f11c6ff037"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "e2af19aed421ab6dddd322841ac957bfbe66b786457e5d983271834dfc203f29"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "82aa291a5351879b9405c8118f439ca306e2d5ceab45f30fef7cfd4a584c354a"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "d8ac5e917b2099e5cbe2999f297b56e2cc946e545f39aebc1e1aa91dd5cb0e9f"
+    },
+    {
+      "path": "NOTICE.md",
+      "sha256": "536a6512f23a0a48b49b6eeadcabc3f7f0f28d5ca1452e79d11373d7ab583171"
+    },
+    {
+      "path": "README.ja.md",
+      "sha256": "d8d474d2974681e5172991157abe061966a699b121255a553138a0b5910544ae"
+    },
+    {
+      "path": "README.md",
+      "sha256": "ec48038078112ee16ea22a72458bbad69c746a3039ad67ceb443b6764d37e597"
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "75fd83610c75eb23d2b9387c063bb6ae50975ff6916bb715e5b64e76bf7d0bad"
+    },
+    {
+      "path": "bun.lock",
+      "sha256": "026a5bcbdcb69e7097a1dab53a02fae1674b378aee8a18cfff8405875d61353c"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "sha256": "3b8dfe8af3802f8e641ca655f18d66b787181af7bc00e0b17a907c68393d8d41"
+    },
+    {
+      "path": "docs/DEVELOPMENT.md",
+      "sha256": "f63bd06047ef759e6613cfe7d01a62d5c89df81f84ac372996a17ba9186331bc"
+    },
+    {
+      "path": "docs/DISTRIBUTION.md",
+      "sha256": "76f318cba2adb612a8caa9fb89808ba7225ac7919791dea27db52cfe3422a1e4"
+    },
+    {
+      "path": "docs/INSTALL-LINUX.md",
+      "sha256": "bbd7421a9f9895bde7fa89c8bbba1a8e910699d8511119bf32cff0f6b0eb0d14"
+    },
+    {
+      "path": "docs/INSTALL-MAC.md",
+      "sha256": "3754be6ba310127947e450f0cd70d048064bbe8a65a850b8efb893513f94f036"
+    },
+    {
+      "path": "docs/INSTALL-WSL.md",
+      "sha256": "905b83681449ad57b8fdb756c518e8b1c2d2e80ef045ea47f49398f4fecc9130"
+    },
+    {
+      "path": "docs/OPERATIONS.md",
+      "sha256": "98a53803520a8ef13e5fb93b89d12baa48f1fdb2de89f39131b9053e3d2053c5"
+    },
+    {
+      "path": "docs/PRIVACY.md",
+      "sha256": "c235e6d0bc829e050ccde2043c3b12287c116c85ce29632bbde27ac8b27eb7ea"
+    },
+    {
+      "path": "docs/PROVIDERS.md",
+      "sha256": "380919c2ef79e6822c659e94ed72f9b9b5cad6b4f5db4968364d7cf9a091d016"
+    },
+    {
+      "path": "docs/RELEASE-READINESS.md",
+      "sha256": "6dfcf0e36658bc7b3654b17eb6d238823e5a17fafc63d2dafe60a537eb266ec6"
+    },
+    {
+      "path": "docs/SOURCE-VERIFICATION.json",
+      "sha256": "27f4145878c48a06f6c0e9182886cdf047d09c6a3b5b87c1a186e4b18f6447b6"
+    },
+    {
+      "path": "package.json",
+      "sha256": "17309f3394e44e3be032208dcd3d982997ddaf6c17fff5c8a5474706f0c6fa82"
+    },
+    {
+      "path": "providers.example.json",
+      "sha256": "32fc67184d150e5551f1b60fdacfe5be2b3167e9969031de034b5a757217afd6"
+    },
+    {
+      "path": "release-status.json",
+      "sha256": "3b10fe06dfdd7efaaedb621f2cfd4174401d342a7cb1cc46d59e74efd95792cf"
+    },
+    {
+      "path": "release.manifest.json",
+      "sha256": "6abae1f093fa9042cd37939619820c62de3d8d646589ccbb52d1b8d0c23ccf89"
+    },
+    {
+      "path": "src/atom-component.js.fragment",
+      "sha256": "8c71cedb002abdc7edf79c2263b31ed3549fbb2006e2681c39227a2eedf4ecb9"
+    },
+    {
+      "path": "src/bridge.ts",
+      "sha256": "af3d8a8f23d548a99bd0313605d2c603f5e886b2673c24405d81703c04b57c52"
+    },
+    {
+      "path": "src/catalog.ts",
+      "sha256": "9a234318ab8264b217f95f49a6a0cfafbc14b1b752459b860267c35d2ebc6fd9"
+    },
+    {
+      "path": "src/chatgpt-credentials.js",
+      "sha256": "55cbb16c8b8716c584c24d26ca27fef34f41ddd71c05bc0b59973686fba1532a"
+    },
+    {
+      "path": "src/chimeric-atom-3d-static.svg",
+      "sha256": "c7e854072cde3a52fc42473affa5defeb95690149d8bd0e415ecfe11e1b95b08"
+    },
+    {
+      "path": "src/chimeric-atom-3d.svg",
+      "sha256": "24c48f4e571f47af91ae9e0646f5be51d9facfa28646914a4defd677103514df"
+    },
+    {
+      "path": "src/chimeric-dna.json",
+      "sha256": "2b1a04ae29d0b1d2ce0693b7ba431e7422afb304c048c29d58f030961e882034"
+    },
+    {
+      "path": "src/chimeric-favicon.svg",
+      "sha256": "995d0d452002a9e3370a83d56a5a6bfe737c2fa92d08995331c75502e14cad9c"
+    },
+    {
+      "path": "src/chimeric-icon-192.png",
+      "sha256": "6c2e4135a1f34d1b87c3346090967b367aed5a6b7244d4f1778d56ab9e2e5d93"
+    },
+    {
+      "path": "src/chimeric-icon-512.png",
+      "sha256": "bffe4c7669d9632aa7c3b35879b259d678b2fcbb711fdbb396b0f49719965761"
+    },
+    {
+      "path": "src/chimeric-ui.css",
+      "sha256": "031227e81e9f3438b1dff7c2121ea02d842656461cfe9936698f2cd82c7fc281"
+    },
+    {
+      "path": "src/content.ts",
+      "sha256": "ed2dcf9b6960f3e7925756feebb1f50c45523fde47a756518a7d88fac07d9664"
+    },
+    {
+      "path": "src/help.ts",
+      "sha256": "f33564679ab7311a60f12d1644d5051cd8d7ed0131b93a26353f320975948ef5"
+    },
+    {
+      "path": "src/ja.json",
+      "sha256": "db062ea79cc6805b02a5200ff2f3992b18ab07bd475e87f6b834114909a7d7b8"
+    },
+    {
+      "path": "src/local-gate.ts",
+      "sha256": "46190a004d68de0c5374f6a19afb843e13797ec3eaf99b34a57f1590c3cfc933"
+    },
+    {
+      "path": "src/local-runtime.ts",
+      "sha256": "9297d70b1abd14e6bb30d670dba46c540d8c183227fc2eed2f43315975686f4c"
+    },
+    {
+      "path": "src/localization.ts",
+      "sha256": "1083e078738fe07bb7a105900ad68bef8f9aa02bdb886d718946453fdc48e895"
+    },
+    {
+      "path": "src/macos/Chimeric.swift",
+      "sha256": "b2eb2c05ba6d758d2bf5c3b8fe8b428a40bcc02da09b1317ecff5cfe17735465"
+    },
+    {
+      "path": "src/model-effort.ts",
+      "sha256": "411afea913b3a822afede8b8dc9c486c5934bcee758a286852c59f384794d3d1"
+    },
+    {
+      "path": "src/network-policy.ts",
+      "sha256": "7b8bfefffe1d5c48c866c0902f76bfe7466e63c77099ca0013389866e4a8474e"
+    },
+    {
+      "path": "src/protocol.ts",
+      "sha256": "0f98c05ba20e425be9c4d4514be4bb635c3f013f9f1c49bbb1575e820052e316"
+    },
+    {
+      "path": "src/provider-manager.ts",
+      "sha256": "1ee1872562ca8411da39c3d960ba1b51fcf3060f613c042d9f0781585d8cd656"
+    },
+    {
+      "path": "src/provider-secrets.ts",
+      "sha256": "57606eef91d82d958674c71a61812e998a996cba7fa0ccc985503bf881c8fd85"
+    },
+    {
+      "path": "src/provider-settings.js",
+      "sha256": "50da952823d9482fd85e4835a19b74a322d7fb489446ef12519ba7087ec7acbf"
+    },
+    {
+      "path": "src/providers-http.ts",
+      "sha256": "210598ffa62389a96b6f010455cabbac1f81f45680b509161532799e1ae952cb"
+    },
+    {
+      "path": "src/registry.ts",
+      "sha256": "57fda34de367470a1447c61c65c86003fbc329eed00ad2e8b42d3c90ea6fe049"
+    },
+    {
+      "path": "src/server-tools.ts",
+      "sha256": "12659c507abdfb80f3912697f4748856ca23286cd3a4818eec097b8c757adc1b"
+    },
+    {
+      "path": "src/subscription.ts",
+      "sha256": "58a93c65d4e97fdc62d178ee65442c67db4c58d9da448c70eba3f90b2b444a36"
+    },
+    {
+      "path": "src/voice.ts",
+      "sha256": "2b284302174cefafe5edd5e71aefe61d2742dbc73070c2ceb846058911661433"
+    },
+    {
+      "path": "tests/catalog.test.ts",
+      "sha256": "2b08047076de107e8b81f16a55f90b4a34dd6c65da7af1584620772f7676d1fd"
+    },
+    {
+      "path": "tests/content.test.ts",
+      "sha256": "49884e064641b8cf650c8bbd15bb02a81e81338e6fbe40662062c2cccab37901"
+    },
+    {
+      "path": "tests/launcher.test.ts",
+      "sha256": "e7015d0ba765dfbe7a7fd29990249c478ce616a737fd373d4de52c76481eb09c"
+    },
+    {
+      "path": "tests/local-gate.test.ts",
+      "sha256": "7dbaab8931ebd542d395585a55d581fabeb4de03d1d5eb4971d898de2fc8e268"
+    },
+    {
+      "path": "tests/localization.test.ts",
+      "sha256": "200443874b76ed7d6f60cf7f87ad04bb5c8bf31f3109df08ea7ec9cbd6f68ebb"
+    },
+    {
+      "path": "tests/native-daemon-body.js.fragment",
+      "sha256": "9f601e3c5f5fbb482e0812eab034749fbb45bd4a04bd89c4a54d9ae8f01bf40b"
+    },
+    {
+      "path": "tests/native-process.test.ts",
+      "sha256": "774f73dbaf23c7c126cbdc2aa34f0c2974c7032872ebef8d10f989d565dfd284"
+    },
+    {
+      "path": "tests/network-policy.test.ts",
+      "sha256": "f8017dedf4af16b626d946d6ae7683694daba186a4af5b4ff0b169cf3f6f0912"
+    },
+    {
+      "path": "tests/protocol.test.ts",
+      "sha256": "01aa456dd1eda1280cfca7213a130af5db0f4547679f9fb29ecbff2fa10df5ca"
+    },
+    {
+      "path": "tests/providers.test.ts",
+      "sha256": "fb898aadcef364d9b38ec2d0aafb755666028b6232f64ec6d92c19d26e623a6b"
+    },
+    {
+      "path": "tests/subscription.test.ts",
+      "sha256": "d8c37a87c02c036ee6ce30068da0a287734a510313ef329e40efe0d0e2e6768c"
+    },
+    {
+      "path": "tests/test_portable_export.py",
+      "sha256": "7a36832c758b6c7dcabe9af6e2e9a25b9f9988d2b308f26931325d47aba439cf"
+    },
+    {
+      "path": "tests/test_release.py",
+      "sha256": "bee9c96880844376c4bca47130ae3fbf584b25c00d574b9290a57b78fa9830f9"
+    },
+    {
+      "path": "tests/voice.test.ts",
+      "sha256": "087c12ee7041482a0369a06c6bbd2428175bb8b99878cc59b693f2ca828d0ad5"
+    },
+    {
+      "path": "third-party/OpenScience-LICENSE",
+      "sha256": "d8ac5e917b2099e5cbe2999f297b56e2cc946e545f39aebc1e1aa91dd5cb0e9f"
+    },
+    {
+      "path": "tools/brand-frontend.mjs",
+      "sha256": "602c4b786f4f85bcc5a98ab52b78dd1b4c2e097377cf5ae687422f109488ab1f"
+    },
+    {
+      "path": "tools/build-frontend.py",
+      "sha256": "f7a04d3f55f94ae5bf7ebb908a38be90a103d4c4ae7d795c2ec2f88d587a076f"
+    },
+    {
+      "path": "tools/build-macos-app.py",
+      "sha256": "5446b7fbf4f88b3b92034583d72e0e36d6f4195707ef05e17cda6f6037655db0"
+    },
+    {
+      "path": "tools/build-portable.py",
+      "sha256": "5c7877e2a6a088427c3fa4ca49fe3a3ca54dbfe66622e074b02ad896372bc334"
+    },
+    {
+      "path": "tools/build-runtime.ts",
+      "sha256": "3066c8d2046c35b09ccc90b9dd8c0f29a4016f488a120e7d525d71de20a7551d"
+    },
+    {
+      "path": "tools/generate-atom.mjs",
+      "sha256": "2448ab53100dab3291875a2571bb0999bfbb8eceedbcaac0a85eb6bf0b311cb3"
+    },
+    {
+      "path": "tools/launcher.mjs",
+      "sha256": "1f122e41206db802326453c8c3409d966657ac8cd13c9d5cd12a268ef33363e8"
+    },
+    {
+      "path": "tools/local_asr.py",
+      "sha256": "bb19e5795c7af38c1b7df8ddbe68f336a6c8846979d218425c0f5cbf3cfcaf39"
+    },
+    {
+      "path": "tools/native-process.ts",
+      "sha256": "f70cb077388b5cb4d70dccdbb4a91c94ed9932bc84f67baa3c5b27f7fec01b20"
+    },
+    {
+      "path": "tools/native-revisions.ts",
+      "sha256": "c8a11e0ae74117335e3705f637ae36084e482483cfc2633d2fdf01ff71815f12"
+    },
+    {
+      "path": "tools/native_client.py",
+      "sha256": "64095196bb28279f8e9888b0e596baebce0848839e8b49c0ed61edb45456e2a9"
+    },
+    {
+      "path": "tools/prepare-release.py",
+      "sha256": "4a86435432d4940f9a4fde5c1aad40412910790569bd2d443a038a5c865537f5"
+    },
+    {
+      "path": "tools/recover_runtime.py",
+      "sha256": "fa2465776b6078a07916a14b611454576ede8c9b0c112e5f5af156bc7796e78e"
+    },
+    {
+      "path": "tools/release_check.py",
+      "sha256": "e69578e0c6df8a6c10e6f7e7f731250111ba1faa841936a077504cf5a459cf0d"
+    },
+    {
+      "path": "tools/ui_style.py",
+      "sha256": "447f7070860894a4583e8d8aef3ec26d73fa1e8e2a13827a4f1466112aed43ac"
+    },
+    {
+      "path": "tools/update-style.py",
+      "sha256": "46af8c55fe741da309c14c0b9904eca4281b3eed09e9314ae653bec5599951ab"
+    }
+  ]
+}

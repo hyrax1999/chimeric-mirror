@@ -1,0 +1,25 @@
+{
+  "name": "chimeric",
+  "version": "0.1.0",
+  "private": true,
+  "license": "Apache-2.0",
+  "type": "module",
+  "description": "Chimeric research workbench integration with configurable model connections",
+  "scripts": {
+    "test": "bun test",
+    "build:runtime": "bun tools/build-runtime.ts",
+    "check:release": "python3 tools/release_check.py",
+    "test:release": "python3 -m unittest discover -s tests -p 'test_*.py'"
+  },
+  "dependencies": {
+    "@earendil-works/pi-ai": "1.3.0",
+    "js-yaml": "4.3.2",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@babel/generator": "7.28.5",
+    "@babel/parser": "7.28.5",
+    "@babel/traverse": "7.28.5",
+    "@babel/types": "7.28.5"
+  }
+}

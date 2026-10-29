@@ -1,0 +1,24 @@
+f.memo(function AtomIndicator({size:e="m",isWorking:t=true,className:n}) {
+  const r=Qjt[e];
+  const [reduced,setReduced]=f.useState(()=>window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+  f.useEffect(()=>{
+    const media=window.matchMedia("(prefers-reduced-motion: reduce)");
+    const update=()=>setReduced(media.matches);
+    update();media.addEventListener("change",update);
+    return ()=>media.removeEventListener("change",update);
+  },[]);
+  const active=t&&!reduced;
+  return a.jsx("span",{
+    className:`inline-block shrink-0 text-[color:var(--cds-fill-brand)] ${n??""}`,
+    style:{width:r,height:r},"aria-hidden":true,"data-chimeric":"thinking-atom",
+    "data-animating":active?"true":"false",
+    children:a.jsxs("svg",{viewBox:"0 0 24 24",width:r,height:r,fill:"none",children:[
+      ...[0,60,120].map((angle,index)=>a.jsxs("g",{transform:`rotate(${angle} 12 12)`,children:[
+        a.jsx("ellipse",{cx:12,cy:12,rx:9.6,ry:4.1,stroke:"currentColor",strokeWidth:0.9,opacity:0.58}),
+        a.jsx("circle",{cx:active?0:21.6,cy:active?0:12,r:1.2,fill:"currentColor",
+          children:active?a.jsx("animateMotion",{dur:"3.2s",begin:`-${index*0.85}s`,repeatCount:"indefinite",path:"M21.6 12 A9.6 4.1 0 1 1 2.4 12 A9.6 4.1 0 1 1 21.6 12"}):undefined})
+      ]},angle)),
+      a.jsx("circle",{cx:12,cy:12,r:1.8,fill:"currentColor"})
+    ]})
+  });
+})
