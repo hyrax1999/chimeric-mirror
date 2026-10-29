@@ -21,7 +21,7 @@
     },
     {
       "path": ".github/workflows/checks.yml",
-      "sha256": "d8facf2023c5f2180c64aefd58d67546c5923f8e2cd1c6177cb5d1aa4535e65d"
+      "sha256": "07f444f8e5f4ba050cdc4f0950f3a6aa99ce2fc1a3db00290eea5273b7223132"
     },
     {
       "path": ".gitignore",

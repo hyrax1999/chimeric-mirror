@@ -3,6 +3,14 @@ on: [push, pull_request, workflow_dispatch]
 permissions:
   contents: read
 jobs:
+  native-shell:
+    runs-on: macos-14
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - run: swiftc -target arm64-apple-macos13.0 -module-cache-path "$RUNNER_TEMP/chimeric-module-cache" src/macos/Chimeric.swift -o "$RUNNER_TEMP/Chimeric"
   source:
     runs-on: ubuntu-24.04
     timeout-minutes: 10
