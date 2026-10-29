@@ -18,6 +18,7 @@ hashes = {
     vendor: '4e9a7375874787d81fa02df2ed7353271a4a2f21a241ae191fa3236cab83f1f1',
     './web-dist/assets/index-BgpYmw3d.js': '022cf193684419a4cdfd70e6359af7546373692ee6267ef22d3c6a650b569f05',
     './web-dist/assets/ProjectSettings-DSomlcdW.js': '56aa3f7f4b4ee583ed6105a5256d975d516fb49c52e422f61bb9d0d4e285e0c2',
+    './skills/THIRD_PARTY_LICENSES.md': 'a3a392f1ff3b55e98b3a86c741c67c4aae2719513edef139f831b204d834b41b',
 }
 temporary = destination.with_suffix('.tmp.gz')
 seen = set()
@@ -38,11 +39,11 @@ changed = set()
 for index, (member, data) in enumerate(entries):
     if data is None:
         continue
+    if member.name in hashes:
+        if hashlib.sha256(data).hexdigest() != hashes[member.name]:
+            raise RuntimeError('Unsupported native asset boundary: ' + member.name)
+        seen.add(member.name)
     if member.name.startswith('./web-dist/') and member.name.endswith(('.js', '.html')):
-        if member.name in hashes:
-            if hashlib.sha256(data).hexdigest() != hashes[member.name]:
-                raise RuntimeError('Unsupported native frontend boundary: ' + member.name)
-            seen.add(member.name)
         text = data.decode()
         if member.name == './web-dist/assets/ProjectSettings-DSomlcdW.js':
             anchor = 'function Vs({onOpenSettings:e,compact:t=!1,compactSize:s="sm"}={}){'
@@ -99,6 +100,27 @@ for index, (member, data) in enumerate(entries):
             updated = updated.replace(('href="./'+asset+'"').encode(), ('href="./'+asset+version+'"').encode())
     elif member.name == './agents/operon/metadata.yaml':
         updated = data.replace(b'Claude Science', b'Chimeric')
+    elif member.name == './skills/THIRD_PARTY_LICENSES.md':
+        # Rebrand the distribution wrapper while preserving the component
+        # attributions and complete license texts below it.
+        updated = data.replace(b'This distribution of Claude Science includes',
+                               b'This distribution of Chimeric includes')
+        old_shell = (b'### Electron / Chromium (macOS window shell)\n\n'
+                     b'The macOS desktop app hosts the app window in a rebranded, unmodified\n'
+                     b'prebuilt Electron. Where the release builds the app flat, Electron is the app\n'
+                     b'itself; otherwise it is a shell nested in the app\n'
+                     b'(`Contents/Helpers/Claude Science Shell.app`). "The Electron bundle" below is\n'
+                     b'whichever of the two holds Electron.')
+        new_shell = (b'### Electron / Chromium (upstream macOS window shell)\n\n'
+                     b'This notice covers Electron/Chromium components from the upstream distribution,\n'
+                     b'including any shell preserved under `Contents/Helpers`. Chimeric\'s native macOS\n'
+                     b'window uses system AppKit and WKWebView. "The Electron bundle" below is any\n'
+                     b'retained upstream Electron bundle.')
+        if updated.count(old_shell) != 1:
+            raise RuntimeError('Native license wrapper boundary changed')
+        updated = updated.replace(old_shell, new_shell)
+        if b'Claude Science' in updated:
+            raise RuntimeError('Unreviewed product branding remains in license notice')
     if updated != data:
         changed.add(member.name)
         member.size = len(updated)

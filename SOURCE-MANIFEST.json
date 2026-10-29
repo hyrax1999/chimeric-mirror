@@ -301,7 +301,7 @@
     },
     {
       "path": "tools/build-frontend.py",
-      "sha256": "f7a04d3f55f94ae5bf7ebb908a38be90a103d4c4ae7d795c2ec2f88d587a076f"
+      "sha256": "0d8f24c0c1cfb06aa0a711d9f0bd0ea2fb244eaa9bb0e2d3a4efe32d6eb1d058"
     },
     {
       "path": "tools/build-macos-app.py",
