@@ -45,11 +45,11 @@
     },
     {
       "path": "README.ja.md",
-      "sha256": "d8d474d2974681e5172991157abe061966a699b121255a553138a0b5910544ae"
+      "sha256": "de7c1f8c5e3b045fb0b37872ccff93c89d18f43e24eaa671f020f9039644e8c5"
     },
     {
       "path": "README.md",
-      "sha256": "ec48038078112ee16ea22a72458bbad69c746a3039ad67ceb443b6764d37e597"
+      "sha256": "7ac70556ef24a0768d61afd62948af80e68a8ed5caeb00a066c388b0cac1e35f"
     },
     {
       "path": "SECURITY.md",
@@ -89,7 +89,7 @@
     },
     {
       "path": "docs/PRIVACY.md",
-      "sha256": "c235e6d0bc829e050ccde2043c3b12287c116c85ce29632bbde27ac8b27eb7ea"
+      "sha256": "119965c6ec604ce877951f99fce9df315d6c20eee4e3efa0b6c6f5879fbfe078"
     },
     {
       "path": "docs/PROVIDERS.md",

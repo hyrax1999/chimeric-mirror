@@ -2,7 +2,7 @@
 
 [日本語版 README](README.ja.md)
 
-Chimeric is a local research workspace that keeps the original research runtime and harness while adding a provider-neutral model layer, a native Chimeric launcher, local credential handling, model discovery, reasoning controls, vision input, a static DNA mark, and an animated atom identity. The public integration source is [sammanalili/chimeric](https://github.com/sammanalili/chimeric).
+Chimeric is a local research workspace that keeps the original research runtime and harness while adding a provider-neutral model layer, a native Chimeric launcher, local credential handling, model discovery, reasoning controls, vision input, a static DNA mark, and an animated atom identity. The public integration source is [hyrax1999/chimeric-mirror](https://github.com/hyrax1999/chimeric-mirror).
 
 The public source contains the Chimeric integration, build tools, tests, and documentation. The original runtime remains a versioned integration dependency with its original provenance, and recovered runtime binaries, packaged runtime previews, private profiles, API keys, and personal research data are supplied separately.
 
